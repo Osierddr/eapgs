@@ -24,11 +24,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <title>Academic Project Page</title>
-  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-  rel="stylesheet">
-
   <link rel="stylesheet" href="static/css/bulma.min.css">
   <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
   <link rel="stylesheet" href="static/css/bulma-slider.min.css">
@@ -43,6 +38,65 @@
   <script src="static/js/bulma-carousel.min.js"></script>
   <script src="static/js/bulma-slider.min.js"></script>
   <script src="static/js/index.js"></script>
+  
+  <!-- custom additional scripts -->
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- MathJax -->
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      },
+      svg: {
+        fontCache: 'global'
+      }
+    };
+  </script>
+  <script type="text/javascript" id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+  </script>
+
+  <!-- Image Comparison Slider -->
+  <script defer src="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/index.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/styles.css">
+
+  <!-- Swiper -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+<style>
+  /* 居中显示图片 */
+  .slider-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  /* 统一图片大小 */
+  .slider-container img {
+    width: 100%; /* 使图片宽度充满容器 */
+    height: 600px; /* 固定高度 */
+    border-radius: 8px; /* 可选：圆角效果 */
+  }
+  
+  /* 确保滑块容器居中 */
+  .carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  /* 调整标题样式 */
+  .subtitle {
+    margin-top: 1rem;
+    text-align: center;
+  }
+
+</style>
 </head>
 <body>
 
@@ -52,28 +106,29 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Academic Project Page</h1>
-            <div class="is-size-5 publication-authors">
+            <h1 class="title is-2 publication-title"><strong><span style="color:dodgerblue;">EAP-GS</span></strong>: Efficient Augmentation of Pointcloud for 3D Gaussian Splatting in Few-shot Scene Reconstruction</h1>
+            <div class="is-size-4 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">First Author</a><sup>*</sup>,</span>
+                <a href="https://orcid.org/0009-0009-3994-0298" target="_blank">Dongrui Dai</a><sup>1,2</sup>,</span>
                 <span class="author-block">
-                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second Author</a><sup>*</sup>,</span>
-                  <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
+                  <a href="https://orcid.org/0000-0001-9723-5655" target="_blank">Yuxiang Xing</a><sup>1,2</sup>,</span>
                   </span>
                   </div>
+                  <br>
 
                   <div class="is-size-5 publication-authors">
-                    <span class="author-block">Institution Name<br>Conferance name and year</span>
-                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
+                    <span class="author-block"><sup>1</sup>Department of Engineering Physics, Tsinghua University<br><sup>2</sup>Key Laboratory of Particle and Radiation Imaging (Tsinghua University), Ministry of Education
                   </div>
 
+                  <div class="is-size-4 conference">
+                    <span class="univerity-block" style="color: rgb(252, 118, 0);"><b>✨ CVPR 2025 Nashville ✨</b> </span>
+                  </div>
                   <div class="column has-text-centered">
                     <div class="publication-links">
-                         <!-- Arxiv PDF link -->
+                         <!-- Paper PDF link -->
                       <span class="link-block">
-                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
+                        <a href="static/pdfs/main.pdf" target="_blank"
                         class="external-link button is-normal is-rounded is-dark">
                         <span class="icon">
                           <i class="fas fa-file-pdf"></i>
@@ -84,7 +139,7 @@
 
                     <!-- Supplementary PDF link -->
                     <span class="link-block">
-                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
+                      <a href="static/pdfs/supp.pdf" target="_blank"
                       class="external-link button is-normal is-rounded is-dark">
                       <span class="icon">
                         <i class="fas fa-file-pdf"></i>
@@ -95,7 +150,7 @@
 
                   <!-- Github link -->
                   <span class="link-block">
-                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
+                    <a href="https://github.com/Osierddr/EAP-GS" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
@@ -104,14 +159,6 @@
                   </a>
                 </span>
 
-                <!-- ArXiv abstract Link -->
-                <span class="link-block">
-                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
-                  class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
                 </a>
               </span>
             </div>
@@ -123,32 +170,109 @@
 </section>
 
 
-<!-- Teaser video-->
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <video poster="" id="tree" autoplay controls muted loop height="100%">
-        <!-- Your video here -->
-        <source src="static/videos/banner_video.mp4"
-        type="video/mp4">
-      </video>
-      <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
-      </h2>
+<!-- Teaser Images-->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+
+        <div class="item">
+          <h2 class="subtitle has-text-centered">
+            <span style="font-size: 24px;">DRGS [Chung 2024]
+            <span style="font-size: 18px;">  vs  
+            <strong><span style="font-size: 24px;">EAP-GS (Ours)</strong>
+          </h2>
+          <div class="slider-container">
+            <img-comparison-slider>
+              <figure slot="first">
+                <img src="static/images/drgs_bonsai.png">
+              </figure>
+              <figure slot="second">
+                <img src="static/images/eapgs_bonsai.png">
+              </figure>
+            </img-comparison-slider>
+          </div>
+        </div>
+
+        <div class="item">
+          <h2 class="subtitle has-text-centered">
+            <span style="font-size:24px;">FSGS [Zhu 2025]
+            <span style="font-size: 18px;">  vs  
+            <strong><span style="font-size: 24px;">EAP-GS (Ours)</strong>
+          </h2>
+          <div class="slider-container">
+            <img-comparison-slider>
+              <figure slot="first">
+                <img src="static/images/fsgs_garden.png">
+              </figure>
+              <figure slot="second">
+                <img src="static/images/eapgs_garden.png">
+              </figure>
+            </img-comparison-slider>
+          </div>
+        </div>
+
+        <div class="item">
+          <h2 class="subtitle has-text-centered">
+            <span style="font-size: 24px;">CoR-GS [Zhang 2025]
+            <span style="font-size: 18px;">  vs  
+            <strong><span style="font-size: 24px;">EAP-GS (Ours)</strong>
+          </h2>
+          <div class="slider-container">
+            <img-comparison-slider>
+              <figure slot="first">
+                <img src="static/images/corgs_kitchen.png">
+              </figure>
+              <figure slot="second">
+                <img src="static/images/eapgs_kitchen.png">
+              </figure>
+            </img-comparison-slider>
+          </div>
+        </div>
+
+        <div class="item">
+          <h2 class="subtitle has-text-centered">
+            <span style="font-size: 24px;">3DGS [Kerbl 2023]
+            <span style="font-size: 18px;">  vs  
+            <strong><span style="font-size: 24px;">EAP-GS (Ours)</strong>
+          </h2>
+          <div class="slider-container">
+            <img-comparison-slider>
+              <figure slot="first">
+                <img src="static/images/3dgs_room.png">
+              </figure>
+              <figure slot="second">
+                <img src="static/images/eapgs_room.png">
+              </figure>
+            </img-comparison-slider>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
-<!-- End teaser video -->
+<!-- End teaser Images -->
 
 <!-- Paper abstract -->
 <section class="section hero is-light">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
+      <div class="column is-five-fifths">
+        <h2 class="title is-3" style="color: dodgerblue;">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
+            3D Gaussian splatting (3DGS) has shown impressive performance in 3D scene reconstruction. 
+            However, it suffers from severe degradation when the number of training views is limited, resulting in blur and floaters. 
+            Many works have been devoted to standardize the optimization process of 3DGS through regularization techniques. 
+            However, we identify that inadequate initialization is a critical issue overlooked by current studies. 
+            To address this, we propose <strong>EAP-GS</strong>, a method to enhance initialization for fast, accurate, and stable few-shot scene reconstruction. 
+            Specifically, we introduce an Attentional Pointcloud Augmentation (APA) technique, which retains two-view tracks as an option for pointcloud generation. 
+            Additionally, the scene complexity is used to determine the required density distribution, thereby constructing a better pointcloud. 
+            We implemented APA by extending Structure-From-Motion (SFM) to focus on pointcloud generation in regions with complex structure but sparse pointcloud distribution, 
+            which significantly increases the number of valuable points and effectively harmonizes the density distribution. 
+            A better pointcloud leads to more accurate scene geometry and mitigates local overfitting during reconstruction stage. 
+            Furthermore, our APA can be framed as a modular augmentation to existing methods with minimal overhead. 
+            Experimental results from various indoor and outdoor scenes demonstrate that the proposed EAP-GS achieves outstanding scene reconstruction performance and surpasses state-of-the-art methods.
           </p>
         </div>
       </div>
@@ -157,128 +281,218 @@
 </section>
 <!-- End paper abstract -->
 
-
-<!-- Image carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
+<!-- Paper Pipeline -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered" style="color: dodgerblue;">Approach</h2><br>
+    <div class="content has-text-justified">
+      <div class="columns is-centered">
+        <figure class="image is-centered">
+          <img src="static/images/pipeline.png" alt="Pipeline Image">
+        </figure>
       </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          Second image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
+      <p>
+        We utilize the original 3DGS in the reconstruction stage and it can be easily replaced by other optimization methods. 
+        Our main innovations are in the initialization stage, 
+        an <strong>Attentional Pointcloud Augmentation (APA)</strong> technique is adapted by retaining two-view tracks as an option in attention regions for pointcloud generation, 
+        which dramatically increases the number of valuable points and effectively harmonizes the density distribution. 
+        A better pointcloud leads to more stable and accurate reconstruction.<br>
+      </p>
     </div>
   </div>
-</div>
-</div>
 </section>
-<!-- End image carousel -->
+<!-- End Paper Pipeline -->
 
+<!-- Paper Results -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3" style="color: dodgerblue;">Result</h2>
+        <div class="content has-text-justified">
+          <img src="static/images/result.jpg">
+          <p>
+            The testing view reconstruction results of our method and other baselines, trained with 3 views on the LLFF dataset and 12 views on the Mip-NeRF360 dataset.''
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Paper Results -->
 
-
-
-<!-- Youtube video -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          
-          <div class="publication-video">
-            <!-- Youtube embed code here -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<!-- Paper Modular -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+      <h3 class="title is-3" style="color: dodgerblue;">Modular Augmentation</h3>
+      <div class="content has-text-justified">
+      <p>
+        In this work, we propose a novel pointcloud augmentation method in the initialization stage, which is not conflict with the regularization in the reconstruction stage.
+        Hence, our APA can be framed as a modular augmentation to existing methods (3DGS, DRGS, FSGS, CoR-GS ...) with minimal overhead.<br>
+      </p>
+      </div>
+      <div class="columns is-centered">
+        <div class="column">
+          <h2 class="title is-6">3DGS</h2>
+          <div class="columns is-centered">
+            <div class="content-video" style="margin: 2px">
+              <video autoplay controls muted loop playsinline height="100%">
+                <source src="static/videos/3dgs_horns.mp4"
+                type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <div class="columns is-centered">
+            <div class="content-video" style="margin: 2px">
+              <video  autoplay controls muted loop playsinline height="100%">
+                <source src="static/videos/3dgs_kitchen.mp4"
+                type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <h2 class="title is-6">FSGS</h2>
+          <div class="columns is-centered">
+            <div class="content-video" style="margin: 2px">
+              <video  autoplay controls muted loop playsinline height="100%">
+                <source src="static/videos/fsgs_fern.mp4"
+                type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <div class="columns is-centered">
+             <div class="content-video" style="margin: 2px">
+              <video  autoplay controls muted loop playsinline height="100%">
+                <source src="static/videos/fsgs_bonsai.mp4"
+                type="video/mp4">
+              </video>
+            </div>
           </div>
         </div>
-      </div>
+
+        <div class="column">
+          <h2 class="title is-6">3DGS+APA</h2>
+          <div class="columns is-centered">
+            <div class="content-video" style="margin: 2px">
+              <video autoplay controls muted loop playsinline height="100%">
+                <source src="static/videos/3dgsaug_horns.mp4"
+                type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <div class="columns is-centered">
+            <div class="content-video" style="margin: 2px">
+              <video  autoplay controls muted loop playsinline height="100%">
+                <source src="static/videos/3dgsaug_kitchen.mp4"
+                type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <h2 class="title is-6">FSGS+APA</h2>
+          <div class="columns is-centered">
+            <div class="content-video" style="margin: 2px">
+              <video  autoplay controls muted loop playsinline height="100%">
+                <source src="static/videos/fsgsaug_fern.mp4"
+                type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <div class="columns is-centered">
+             <div class="content-video" style="margin: 2px">
+              <video  autoplay controls muted loop playsinline height="100%">
+                <source src="static/videos/fsgsaug_bonsai.mp4"
+                type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+
+        <div class="column">
+          <h2 class="title is-6">DRGS</h2>
+          <div class="columns is-centered">
+             <div class="content-video" style="margin: 2px">
+              <video  autoplay controls muted loop playsinline height="100%">
+                <source src="static/videos/drgs_horns.mp4"
+                type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <div class="columns is-centered">
+             <div class="content-video" style="margin: 2px">
+              <video  autoplay controls muted loop playsinline height="100%">
+                <source src="static/videos/drgs_kitchen.mp4"
+                type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <h2 class="title is-6">CoR-GS</h2>
+          <div class="columns is-centered">
+             <div class="content-video" style="margin: 2px">
+              <video  autoplay controls muted loop playsinline height="100%">
+                <source src="static/videos/corgs_fern.mp4"
+                type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <div class="columns is-centered">
+             <div class="content-video" style="margin: 2px">
+              <video  autoplay controls muted loop playsinline height="100%">
+                <source src="static/videos/corgs_bonsai.mp4"
+                type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+
+        <div class="column">
+          <h2 class="title is-6">DRGS+APA</h2>
+          <div class="columns is-centered">
+             <div class="content-video" style="margin: 2px">
+              <video  autoplay controls muted loop playsinline height="100%">
+                <source src="static/videos/drgsaug_horns.mp4"
+                type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <div class="columns is-centered">
+             <div class="content-video" style="margin: 2px">
+              <video  autoplay controls muted loop playsinline height="100%">
+                <source src="static/videos/drgsaug_kitchen.mp4"
+                type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <h2 class="title is-6">CoR-GS+APA</h2>
+          <div class="columns is-centered">
+             <div class="content-video" style="margin: 2px">
+              <video  autoplay controls muted loop playsinline height="100%">
+                <source src="static/videos/corgsaug_fern.mp4"
+                type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <div class="columns is-centered">
+             <div class="content-video" style="margin: 2px">
+              <video  autoplay controls muted loop playsinline height="100%">
+                <source src="static/videos/corgsaug_bonsai.mp4"
+                type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>  
     </div>
-  </div>
 </section>
-<!-- End youtube video -->
 
-
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <video poster="" id="video1" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <video poster="" id="video2" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <video poster="" id="video3" autoplay controls muted loop height="100%">\
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End video carousel -->
-
-
-
-
-
-
-<!-- Paper poster -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
-
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
-        
-      </div>
-    </div>
-  </section>
-<!--End paper poster -->
+<!-- End Paper Modular -->
 
 
 <!--BibTex citation -->
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
-      <pre><code>BibTex Code Here</code></pre>
+      <pre><code>Coming soon...</code></pre>
     </div>
 </section>
 <!--End BibTex citation -->
